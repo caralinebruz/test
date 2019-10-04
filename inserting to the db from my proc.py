@@ -12,7 +12,7 @@ import psycopg2
 
 
 def make_request():
-	url = 'https://s3.amazonaws.com/data-eng-homework/v1/data.zip'
+	url = ''
 	r = requests.get(url, stream=True, timeout=10)
 
 	pprint(r.headers)
@@ -34,7 +34,7 @@ order_details_header = ['id', 'summary_id', 'product_id', 'quantity', 'variant_i
 
 # loadable filenames to db 
 dts = time.strftime('_%Y%m%d_%H%M%S')
-path = 'C:\\Users\\caraline\\Desktop\\glossier\\'
+path = ''
 ext = dts + '.txt'
 user_details_file  = path + 'users' + ext
 order_summary_file = path + 'order_summary' + ext
@@ -114,11 +114,11 @@ def parse(z):
 
 
 c = {
-	'host' : 'datacandidatehomework.czwbfb7cwdaf.us-east-1.rds.amazonaws.com',
-	'port'  : 5432,
-	'user' : 'caraline',
-	'password' : 'iheartmilkyjelly',
-	'database' : 'caraline_db'
+	'host' : '',
+	'port'  : 80,
+	'user' : 'c',
+	'password' : '',
+	'database' : 'cdb'
 	}
 
 def connect():
