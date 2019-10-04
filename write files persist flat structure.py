@@ -10,7 +10,7 @@ import logging
 
 # just see the raw response from the url
 
-url = 'https://s3.amazonaws.com/data-eng-homework/v1/data.zip'
+url = ''
 
 r = requests.get(url, stream=True, timeout=10) # add timeout at a later check in
 
@@ -43,7 +43,7 @@ order_summary_header = ['id', 'closed_at', 'created_at', 'updated_at', 'number',
 order_details_header = ['id', 'summary_id', 'product_id', 'quantity', 'variant_id'] # summary.id = details.summary_id
 
 # loadable filenames to db 
-path = 'C:\\Users\\caraline\\Desktop\\glossier\\'
+path = ''
 user_details_file  = path + 'users' + dts + '.txt'
 order_summary_file = path + 'order_summary' + dts + '.txt'
 order_details_file = path + 'order_details' + dts + '.txt'
