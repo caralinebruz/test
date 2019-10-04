@@ -9,15 +9,15 @@ import time
 import logging
 import psycopg2
 
-filename = "'C:\\Users\\caraline\\Desktop\\glossier\\users_20180205_004937'"
+filename = ""
 #filename = users_file + 'users_20180205_004937'
 
 c = {
-	'host' : 'datacandidatehomework.czwbfb7cwdaf.us-east-1.rds.amazonaws.com',
-	'port'  : 5432,
-	'user' : 'caraline',
-	'password' : 'iheartmilkyjelly',
-	'database' : 'caraline_db'
+	'host' : '',
+	'port'  : 80,
+	'user' : 'c',
+	'password' : '',
+	'database' : 'cdb'
 	}
 
 def connect():
@@ -36,7 +36,7 @@ def connect():
 		# create cursor
 		cur = conn.cursor()
 
-		sql = 'ALTER USER caraline WITH SUPERUSER;'
+		sql = 'ALTER USER c WITH SUPERUSER;'
 		#sql = 'COPY users FROM ' + filename + ' WITH (FORMAT csv);'
 		print("final sql: ", sql)
 		cur.execute(sql)
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
 ## getting this error:
 # Connecting to PostgreSQL db...
-# final sql:  COPY users FROM 'C:\Users\caraline\Desktop\glossier\users_20180205_004937' WITH (FORMAT csv);
+# final sql:  COPY users FROM '' WITH (FORMAT csv);
 # must be superuser to COPY to or from a file
 #HINT:  Anyone can COPY to stdout or from stdin. psql's \copy command also works for anyone.
 ###
