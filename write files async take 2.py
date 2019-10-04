@@ -8,7 +8,7 @@ import time
 
 # just see the raw response from the url
 
-url = 'https://s3.amazonaws.com/data-eng-homework/v1/data.zip'
+url = ''
 
 r = requests.get(url, stream=True, timeout=10) # add timeout at a later check in
 
