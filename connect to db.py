@@ -12,7 +12,7 @@ import psycopg2
 
 
 def make_request():
-	url = 'https://s3.amazonaws.com/data-eng-homework/v1/data.zip'
+	url = ''
 	r = requests.get(url, stream=True, timeout=10)
 
 	pprint(r.headers)
@@ -114,11 +114,11 @@ def parse(z):
 
 
 c = {
-	'host' : 'datacandidatehomework.czwbfb7cwdaf.us-east-1.rds.amazonaws.com',
-	'port'  : 5432,
-	'user' : 'caraline',
-	'password' : 'iheartmilkyjelly',
-	'database' : 'caraline_db'
+	'host' : '',
+	'port'  : 80,
+	'user' : '',
+	'password' : '',
+	'database' : 'cdb'
 	}
 
 def connect():
